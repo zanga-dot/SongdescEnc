@@ -27,7 +27,7 @@ try:
 except KeyError:
     enc.write(struct.pack(">I",songdesc["COMPONENTS"][0]["SweatDifficulty"]))
 enc.write(struct.pack(">I",songdesc["COMPONENTS"][0]["backgroundType"]))
-enc.write(struct.pack(">I",songdesc["COMPONENTS"][0]["LyricsType"]))
+enc.write(struct.pack(">i",songdesc["COMPONENTS"][0]["LyricsType"]))
 enc.write(struct.pack(">Q",5351931904)+struct.pack(">Q",8589934608)+struct.pack(">I",1866479568))
 enc.write(struct.pack(">I",musictrack["COMPONENTS"][0]["trackData"]["structure"]["previewEntry"]))
 enc.write(struct.pack(">Q",16)+struct.pack(">I",2971648438))
